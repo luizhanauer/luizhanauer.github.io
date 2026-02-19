@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  /* Valores padrão (fallback) caso o JSON demore a carregar */
+  --bg: #0d1117;
+  --card: rgba(22, 27, 34, 0.8);
+  --border: #30363d;
+  --accent: #58a6ff;
+  --featured: #d29922;
+  --textMain: #c9d1d9;
+  --textDim: #8b949e;
+}
+
+@theme {
+  /* Mapeando as variáveis CSS para classes utilitárias do Tailwind */
+  --color-github-bg: var(--bg);
+  --color-github-card: var(--card);
+  --color-github-border: var(--border);
+  --color-github-accent: var(--accent);
+  --color-github-featured: var(--featured);
+  --color-github-text-main: var(--textMain);
+  --color-github-text-dim: var(--textDim);
+  
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Utilitário para animação de loading */
+@keyframes wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton-wave {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  animation: wave 1.5s infinite;
+}
+
+#bg-canvas {
+  background-color: transparent !important;
+  /* Garante que o fundo definido no body apareça através do canvas */
+}
+
+body {
+  background-color: var(--bg); /* Usa a cor do seu config.json */
+  margin: 0;
+  overflow-x: hidden;
+}

@@ -1,0 +1,25 @@
+{
+  "profile": {
+    "username": "luizhanauer",
+    "pageTitle": "Tools & Lab",
+    "description": "Projetos open-source e ferramentas desenvolvidas por Luiz Hanauer.",
+    "tagFilter": "portfolio-tool",
+    "defaultImage": "https://http.cat/404"
+  },
+  "theme": {
+    "colors": {
+      "bg": "#0d1117",
+      "card": "rgba(22, 27, 34, 0.8)",
+      "border": "#30363d",
+      "accent": "#58a6ff",
+      "featured": "#d29922",
+      "textMain": "#c9d1d9",
+      "textDim": "#8b949e"
+    },
+    "particles": {
+      "color": "rgba(88, 166, 255, 0.15)",
+      "lineOpacity": 2,
+      "count": 200
+    }
+  }
+}
