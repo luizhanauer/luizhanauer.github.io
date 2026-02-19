@@ -11,13 +11,13 @@ const props = defineProps<{
 const formatName = (name: string) => 
   name.split(/[-_ ]+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
 
-const screenshotUrl = computed(() => 
-  `https://raw.githubusercontent.com/${props.username}/${props.repo.name}/assets/screenshot.png`
-);
-
-// const screenshotUrlFeatured = computed(() => 
-//   `https://raw.githubusercontent.com/${props.username}/${props.repo.name}/assets/screenshot_featured.png`
-// );
+// Lógica centralizada para a imagem
+const displayScreenshot = computed(() => {
+  const isFeatured = props.repo.topics.includes('featured');
+  const filename = isFeatured ? 'screenshot_featured.png' : 'screenshot.png';
+  
+  return `https://luizhanauer.github.io/${props.repo.name}/assets/${filename}`;
+});
 
 const handleImageError = (e: Event) => {
   (e.target as HTMLImageElement).src = props.defaultImage;
@@ -31,7 +31,7 @@ const handleImageError = (e: Event) => {
   >
     <div class="relative h-75 w-full overflow-hidden bg-github-bg border-b border-github-border isolate">
       <img 
-        :src="screenshotUrl" 
+        :src="displayScreenshot" 
         :alt="repo.name"
         class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         @error="handleImageError"
