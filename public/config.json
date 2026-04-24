@@ -1,8 +1,8 @@
 {
   "profile": {
     "username": "luizhanauer",
-    "pageTitle": "Tools & Lab",
-    "description": "Projetos open-source e ferramentas desenvolvidas por Luiz Hanauer.",
+    "pageTitle": "Galeria Open Source",
+    "description": "Uma vitrine viva de utilitários independentes e soluções técnicas. Aqui, pequenos manipuladores de texto e ferramentas complexas de infraestrutura compartilham o mesmo DNA: engenharia funcional, código aberto e o objetivo de resolver problemas reais.",
     "tagFilter": "portfolio-tool",
     "defaultImage": "https://http.cat/404"
   },
@@ -17,9 +17,9 @@
       "textDim": "#8b949e"
     },
     "particles": {
-      "color": "rgba(88, 166, 255, 0.15)",
+      "color": "rgba(16, 185, 129, 1)",
       "lineOpacity": 2,
-      "count": 200
+      "count": 50
     }
   }
 }
